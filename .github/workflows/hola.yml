@@ -18,6 +18,9 @@ jobs:
       - name: Descargar el código
         uses: actions/checkout@v4
 
+      - name: Paso que falla a propósito
+        run: exit 1
+
       - name: Ver archivos después de descargar el código
         run: ls -la
 
