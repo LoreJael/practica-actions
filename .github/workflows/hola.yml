@@ -5,11 +5,10 @@ on:
     branches: [main]
   workflow_dispatch:
 
-  jobs:
+jobs:
   saludo:
     runs-on: ubuntu-latest
-
-        steps:
+    steps:
       - name: Mostrar mensaje
         run: echo "Hola desde GitHub Actions"
 
