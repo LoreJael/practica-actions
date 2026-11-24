@@ -1,0 +1,26 @@
+name: Práctica
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+  jobs:
+  saludo:
+    runs-on: ubuntu-latest
+
+        steps:
+      - name: Mostrar mensaje
+        run: echo "Hola desde GitHub Actions"
+
+      - name: Ver archivos antes de descargar el código
+        run: ls -la
+
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Ver archivos después de descargar el código
+        run: ls -la
+
+      - name: Ver versión de Node del runner
+        run: node --version
